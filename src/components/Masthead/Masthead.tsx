@@ -20,6 +20,7 @@ const Masthead: React.FunctionComponent<IMastheadProps> = ({className, header, s
 
 const StyledMasthead = styled(Masthead)`
   padding:4rem;
+  border-bottom:1px solid ${(props) => props.theme.colors.black};
 `
 
 export default StyledMasthead;

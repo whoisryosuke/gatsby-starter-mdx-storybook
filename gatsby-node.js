@@ -118,6 +118,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             frontmatter {
                 tags
+                section
             }
             fields {
               slug
@@ -136,16 +137,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach(({ node }, index) => {
         // Grab random tag to do related posts
         var tag = node.frontmatter.tags[Math.floor(Math.random() * node.frontmatter.tags.length)];
-        createPage({
+
+        // Page object for page creation
+        let pendingPage = {
             // This is the slug we created before
             // (or `node.frontmatter.slug`)
             path: node.fields.slug,
             // This component will wrap our MDX content
-            component: path.resolve(`./src/templates/blog-post.js`),
+            component: path.resolve(`./src/templates/mdx-page.js`),
             // We can use the values in this context in
             // our page layout component
             context: { id: node.id, tag: tag },
-        })
+        }
+
+        // Change page template based on section
+        if (node.frontmatter.section == 'blog') {
+            pendingPage.component = path.resolve(`./src/templates/blog-post.js`);
+        }
+
+        createPage(pendingPage)
     })
 
     /**
@@ -174,6 +184,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
 
     // Create pagination archive pages
-    await createMdxPagination('project', 'projects', graphql, createPage, reporter)
-    await createMdxPagination('blog', 'blog', graphql, createPage, reporter)
+    // await createMdxPagination('blog', 'blog', graphql, createPage, reporter)
 }

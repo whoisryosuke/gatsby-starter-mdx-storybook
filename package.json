@@ -1,15 +1,16 @@
 {
-  "name": "ryosuke-gatsby-blog",
-  "description": "Personal Portfolio and Blog of Ryosuke",
+  "name": "gatsby-starter-mdx-storybook",
+  "description": "Design system focused Gatsby starter setup with MDX, Storybook, Styled Components, and Typescript",
   "version": "1.0.0",
   "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
   "keywords": [
     "react",
+    "mdx",
+    "storybook",
     "styled-components",
     "gatsby",
     "blog",
-    "portfolio",
-    "rebass"
+    "typescript"
   ],
   "license": "MIT",
   "scripts": {

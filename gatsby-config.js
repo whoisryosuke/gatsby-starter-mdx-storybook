@@ -6,9 +6,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-twitter`,
     // {
     //   // Requires custom config for MDX
