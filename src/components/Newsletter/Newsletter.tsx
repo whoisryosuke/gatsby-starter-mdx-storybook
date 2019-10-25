@@ -46,7 +46,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 
 export default class Newsletter extends Component {
   render() {
-    const url = `https://twitter.us12.list-manage.com/subscribe/post?u=ed452dff7fee25e6eb6be3821&amp;id=79387e61b0`
+    const url = `#`
     return (
       <section className="Newsletter cta light blue mt2">
         <section className="container content">
