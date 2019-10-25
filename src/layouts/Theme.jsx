@@ -5,14 +5,15 @@
  */
 
 import React, { Fragment } from "react"
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
+import { ThemeProvider, createGlobalStyle } from "styled-components"
 import * as rebass from "rebass/styled-components"
+import * as siteComponents from "@components"
 
-import theme from "../assets/theme"
+import theme from "@assets/theme"
 
-import List from '../components/List/List'
-import ListItem from '../components/List/ListItem'
-import { CodeBlock } from "../components/CodeBlock/CodeBlock"
+import List from '@components/List/List'
+import ListItem from '@components/List/ListItem'
+import { CodeBlock } from "@components/CodeBlock/CodeBlock"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -51,7 +52,8 @@ export const UIComponents = {
   li: ListItem,
   pre: props => <div {...props} />,
   code: CodeBlock,
-  ...rebass
+  ...rebass,
+  ...siteComponents
 }
 
 export const Theme = ({ children }) => (
