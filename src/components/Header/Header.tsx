@@ -216,9 +216,9 @@ const Header = React.memo(({mobile, visible, toggleVisibility}) => {
             </Link>
           </li>
           <li>
-            <Link to={'/resources'}>
+            <Link to={'/how-to-use'}>
               <Text variant="label">
-                Resources <span>💽</span>
+                How to Use <span>💽</span>
               </Text>
             </Link>
           </li>
