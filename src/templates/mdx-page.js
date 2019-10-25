@@ -1,23 +1,17 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import { Heading, Image, Flex, Box } from 'rebass/styled-components'
+import { Box } from 'rebass/styled-components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../layouts/BaseLayout'
-import ReadingProgress from '../components/ReadingProgress'
 import SEO from '../components/SEO/SEO'
 
 export default class MDXPage extends Component {
   render() {
-    const skip = false
     const post = this.props.data.page
 
     return (
       <Layout className="Page">
-        {/*----- Reading progress only on blog -----*/}
-        {post.frontmatter.section === 'blog' && (
-          <ReadingProgress targetEl="#Article" />
-        )}
         <SEO
           key={`seo-${post.fields.slug}`}
           postData={post}
