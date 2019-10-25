@@ -10,4 +10,80 @@ tags: ['how-to']
   subheader="The easy way to build Gatsby sites"
 />
 
-<SectionHeading heading="Latest blog posts" />
+<SectionHeading emoji="😵" heading="But how do you use it?" />
+
+<Box maxWidth="text" p={3} mx="auto">
+
+1. Create MDX file inside: `/content/pages/`
+2. Write Markdown, HTML, or use React components from Rebass and the website (`/src/components/`)
+3. ???
+4. Profit 💰
+
+### It's a little more nuanced than that
+
+But I promise in practice, it's basically that simple once you get started.
+
+# The (condensed) source code for this page
+
+```mdx
+---
+title: How to Use
+date: '2019-10-24'
+section: page
+tags: ['how-to']
+---
+
+<Masthead
+  header="MDX + Storybook"
+  subheader="The easy way to build Gatsby sites"
+/>
+
+<SectionHeading emoji="😵" heading="But how do you use it?" />
+
+<Box maxWidth="text" p={5}>
+
+1. Create MDX file inside: `/content/pages/`
+2. Write Markdown or use React components from Rebass and the website (`/src/components/`)
+3. ???
+4. Profit
+```
+
+# Creating new MDX pages
+
+The website creates pages using some key data from the MDX files. The first bit comes from the **frontmatter**, which goes on the top of the Markdown file and contains a few key/value pairs. Then you write or compose your page in the **body** of the Markdown (basically anything under the frontmatter).
+
+## Frontmatter
+
+MDX posts require a `title` (used for SEO or blog post headings), a `date` (for sorting), and a `section` (determining blog or page).
+
+Optionally, you can add a `cover_image`, which can point to a relative image (inside same or nested folder) or external URL. The cover image is used for SEO purposes, and the blog post cover image on the single blog post page.
+
+Also optional is `tags`, which has to be an array of strings (e.g. `['media', 'new release']`).
+
+```md
+---
+title: How to Use
+date: '2019-04-20'
+section: blog
+cover_image: './your-collocated-image.jpg'
+tags: ['how-to', 'guide']
+---
+```
+
+## Body
+
+The body accepts Markdown or JSX. When using JSX, you import your React components normally at the top of the document, then use them anywhere below.
+
+MDX allows you to also bring components into the global scope, allowing you to use it without importing in each file. This project comes setup with it's own set of components (`<BasicCard>`, `<Masthead>`, etc) and any Rebass components. In the global scope, you can also override the HTML elements created from the Markdown (like replacing a `<h1>` with `<Heading>` component). You can find these in the `src/layouts/Theme.jsx` file.
+
+> Make sure not to indent any code inside Markdown or it'll think you want to create a blockquote....like this. If you use a Markdown linter it'll help prevent this (which this project comes bundled with 👌)
+
+### Caveats / Gotchas
+
+It also gets tricky when you try to mix Markdown inside of React components. It can work and can be done, but it's a little finnicky. None of the React code can be indented (making more complex/layered components harder to use).
+
+You may notice things like the first paragraph/markdown after the React not getting rendered properly, try adding an extra line break between the React component and the Markdown.
+
+When all else fails for you, you can always write the Markdown as HTML or React to ensure it renders the way you intend.
+
+</Box>
