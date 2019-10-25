@@ -184,5 +184,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
 
     // Create pagination archive pages
-    // await createMdxPagination('blog', 'blog', graphql, createPage, reporter)
+    await createMdxPagination('blog', 'blog', graphql, createPage, reporter)
 }
