@@ -68,14 +68,7 @@ export const query = graphql`
             title
             date
             tags
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1240) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            cover_image 
             section
           }
           fields {

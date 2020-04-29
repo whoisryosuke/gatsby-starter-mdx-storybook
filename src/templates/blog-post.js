@@ -209,14 +209,7 @@ export const query = graphql`
         date(formatString: "DD MMMM, YYYY")
         tags
         section
-        cover_image {
-          publicURL
-          childImageSharp {
-            fluid(maxWidth: 1240) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        cover_image
       }
       body
       fields {
@@ -234,14 +227,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             tags
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1240) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            cover_image
           }
           fields {
             slug

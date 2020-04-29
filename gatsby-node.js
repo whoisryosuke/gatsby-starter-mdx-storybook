@@ -68,16 +68,6 @@ async function createMdxPagination(section, prefix, graphql, createPage, reporte
                     frontmatter {
                         title
                         date(formatString: "DD MMMM, YYYY")
-                        cover_image {
-                            publicURL
-                            childImageSharp {
-                                fluid(maxWidth: 1240) {
-                                    base64
-                                    src
-                                    srcSet
-                                }
-                            }
-                        }
                         section
                         tags
                     }
