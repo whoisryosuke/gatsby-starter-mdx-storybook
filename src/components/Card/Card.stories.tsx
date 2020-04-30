@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Flex } from 'rebass/styled-components'
 import CardGroup from './CardGroup'
+import ArticleCard from './ArticleCard'
 import BasicCard from "./BasicCard"
 import ProjectCard from "./ProjectCard"
 import ImageCard from "./ImageCard"
@@ -26,6 +27,14 @@ export const basic = () => (
 )
 export const group = () => (
          <CardGroup items={items} columns={3} />
+       )
+export const article = () => (
+         <ArticleCard
+           title={title}
+           subheader={subheader}
+           description={description}
+           link={'/test'}
+         />
        )
 export const project = () => <ProjectCard title="Kushy API Documentation" subheader="UI / UX" href="/kushy-api-documentation" />
 export const image = () => <ImageCard title="Kushy API Documentation" subheader="UI / UX" />

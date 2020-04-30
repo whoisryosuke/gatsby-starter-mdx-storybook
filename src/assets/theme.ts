@@ -78,6 +78,7 @@ const theme = {
   },
   shadows: {
     default: '0px 5px 10px rgba(0, 0, 0, 0.12)',
+    hover: '0px 10px 20px rgba(0, 0, 0, 0.2)',
   },
   // rebass variants
   text: {
@@ -116,18 +117,18 @@ const theme = {
       fontFamily: fonts.body,
       fontWeight: 'normal',
       lineHeight: '1.25',
-      fontSize: [0,1],
+      fontSize: [0, 1],
       textTransform: 'uppercase',
     },
     small: {
       fontFamily: fonts.body,
       color: 'gray.dark',
-      fontSize: [0,1],
+      fontSize: [0, 1],
     },
     paragraph: {
       fontFamily: fonts.body,
       lineHeight: '1.75',
-      fontSize: [1,2],
+      fontSize: [1, 2],
       marginBottom: 3,
     },
     list: {
@@ -156,6 +157,12 @@ const theme = {
       borderRadius: 'default',
       bg: 'background',
       boxShadow: 'default',
+      transition: 'box-shadow 400ms ease-in, transform 400ms ease-in',
+      transform: 'translateY(0)',
+      '&:hover': {
+        boxShadow: 'hover',
+        transform: 'translateY(-0.5em)',
+      },
       avatar: {
         width: 'avatar',
         height: 'avatar',
