@@ -1,26 +1,18 @@
 import * as React from 'react';
-import styled from "styled-components"
-import { Heading } from 'rebass/styled-components'
+import { Box, Heading } from 'rebass/styled-components'
 
 interface IMastheadProps {
-  className: string
+  header: string
+  subheader: string
 }
 
-const Masthead: React.FunctionComponent<IMastheadProps> = ({className, header, subheader}) => {
-  return(
-  <section className={className}>
-    <Heading fontSize={[1,2,3]}>{subheader}</Heading>
-      <Heading
-        fontSize={[5, 6, 7]}>{header}
-    </Heading>
-  </section>
+const Masthead: React.FunctionComponent<IMastheadProps> = ({header, subheader}) => {
+  return (
+    <Box as="section" p={4} textAlign="center">
+      <Heading fontSize={[5, 6, 7]}>{header}</Heading>
+      <Heading fontSize={[1, 2, 3]}>{subheader}</Heading>
+    </Box>
   )
 };
 
-
-const StyledMasthead = styled(Masthead)`
-  padding:4rem;
-  border-bottom:1px solid ${(props) => props.theme.colors.black};
-`
-
-export default StyledMasthead;
+export default Masthead
