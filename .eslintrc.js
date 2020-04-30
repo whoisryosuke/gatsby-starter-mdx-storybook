@@ -42,14 +42,6 @@ module.exports = {
         argsIgnorePattern: "^_",
       },
     ],
-    "graphql/template-strings": [
-      "error",
-      {
-        env: "relay",
-        schemaJsonFilepath: path.resolve(__dirname, "./schema.json"),
-        tagName: "graphql",
-      },
-    ],
     "no-console": [
       "error",
       {
