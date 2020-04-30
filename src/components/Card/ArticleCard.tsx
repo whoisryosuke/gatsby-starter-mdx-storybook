@@ -4,13 +4,14 @@ import { ChevronsRight } from 'react-feather'
 import BaseCard from "./BaseCard"
 
 interface IArticleCardProps {
-  title: string,
-  subheader: string,
-  description: string,
+  title: string
+  subheader: string
+  description: string
+  date: string
   link: string
 }
 
-const ArticleCard: React.FunctionComponent<IArticleCardProps> = ({title, subheader, description, link, ...props}) => {
+const ArticleCard: React.FunctionComponent<IArticleCardProps> = ({title, subheader, description, date, link, ...props}) => {
   // Check if Subheader is array or string
   // return one item if array
   let subtitle = subheader
@@ -35,7 +36,7 @@ const ArticleCard: React.FunctionComponent<IArticleCardProps> = ({title, subhead
         justifyContent="space-between"
         sx={{ borderTop: '1px solid', borderColor: 'gray.light' }}
       >
-        <Text variant="small">April 20, 2019</Text>
+        <Text variant="small">{date}</Text>
         <Box>
           <ChevronsRight color="#5B5B5B" />
         </Box>
