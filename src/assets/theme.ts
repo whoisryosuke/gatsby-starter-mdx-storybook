@@ -19,10 +19,11 @@ const breakpoints = [
 const colors = {
   text: '#111212',
   background: '#fff',
-  primary: '#005CDD',
+  primary: '#2F5AF3',
   secondary: '#6D59F0',
   muted: '#f6f6f9',
   gray: {
+    light: "#EEEEEE",
     dark: '#5B5B5B',
   },
   highlight: 'hsla(205, 100%, 40%, 0.125)',
@@ -55,9 +56,7 @@ const theme = {
   colors,
   gradients,
   fonts,
-  fontSizes: [
-    12, 14, 16, 20, 24, 32, 48, 64, 96
-  ],
+  fontSizes: [12, 16, 18, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 500,
@@ -73,13 +72,14 @@ const theme = {
     text: breakpoints[2],
   },
   radii: {
-    default: 0,
+    default: 8,
     circle: 99999,
   },
   shadows: {
+    default: '0px 5px 10px rgba(0, 0, 0, 0.12)',
     card: {
       light: '15px 15px 35px rgba(0, 127, 255, 0.5)',
-      dark: `7px 7px 15px ${colors.primary}`
+      dark: `7px 7px 15px ${colors.primary}`,
     },
   },
   // rebass variants
@@ -124,13 +124,13 @@ const theme = {
     paragraph: {
       fontFamily: fonts.body,
       lineHeight: '1.75',
-      fontSize: [1,2],
+      fontSize: [1, 2],
       marginBottom: 4,
     },
     list: {
       fontFamily: fonts.body,
       lineHeight: '1.75',
-      fontSize: [1,2],
+      fontSize: [1, 2],
       marginBottom: 3,
     },
     display: {
@@ -156,10 +156,10 @@ const theme = {
       avatar: {
         width: 'avatar',
         height: 'avatar',
-        backgroundSize: 'cover', 
-        backgroundPosition:'center',
-        marginBottom: "3rem"
-      }
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        marginBottom: '3rem',
+      },
     },
     link: {
       color: 'primary',
@@ -173,32 +173,37 @@ const theme = {
       textDecoration: 'none',
       ':hover,:focus,.active': {
         color: 'primary',
-      }
+      },
     },
     hr: {
-      width:'100%',
-      borderTop:0,
-      borderBottom:'1px solid black',
-      my:4,
-    }
+      width: '100%',
+      borderTop: 0,
+      borderBottom: '1px solid black',
+      my: 4,
+    },
   },
   buttons: {
     primary: {
       fontSize: 2,
       fontWeight: 'bold',
+      py: 3,
+      px: 4,
+    },
+    masthead: {
+      fontSize: 3,
+      fontWeight: 'bold',
       color: 'background',
       bg: 'primary',
       borderRadius: 'default',
-      padding: '1em 4em',
+      py: 3,
+      px: 5,
+      boxShadow: 'default',
     },
     outline: {
       variant: 'buttons.primary',
       color: 'black',
-      bg: 'transparent',
+      bg: 'white',
       border: '1px solid #000',
-      textTransform: 'uppercase',
-      letterSpacing: '0.1em',
-      fontSize: 1,
     },
     secondary: {
       variant: 'buttons.primary',

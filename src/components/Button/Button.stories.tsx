@@ -4,9 +4,10 @@ import ButtonOutline from "./ButtonOutline"
 
 export default { title: 'Button' };
 
-export const outline = () => <ButtonOutline>Go to blog</ButtonOutline>
-export const filled = () => <Button><Text variant="label">Submit</Text></Button>
-export const filledBigger = () => <Button><Heading variant="subheader" mb={0}>Submit</Heading></Button>
+export const outline = () => <ButtonOutline>Submit</ButtonOutline>
+export const primary = () => <Button variant="primary">Submit</Button>
+export const masthead = () => <Button variant="masthead">Submit</Button>
+export const white = () => <Button variant="masthead" bg="white" color="black">Submit</Button>
 export const inline = () => <Flex>
   <Box
     as="a"
