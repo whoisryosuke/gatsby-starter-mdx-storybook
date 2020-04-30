@@ -40,7 +40,7 @@ const gradients = {
 
 const fonts = {
   body: 'Roboto, Helvetiva Neue, Helvetica, Aria, sans-serif',
-  heading: 'Poppins, Helvetiva Neue, Helvetica, Aria, sans-serif',
+  heading: 'Roboto, Helvetiva Neue, Helvetica, Aria, sans-serif',
   monospace: 'Menlo, monospace',
 }
 
@@ -57,7 +57,7 @@ const theme = {
   colors,
   gradients,
   fonts,
-  fontSizes: [12, 16, 18, 20, 24, 32, 48, 64, 96],
+  fontSizes: [14, 16, 18, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 500,
@@ -78,10 +78,6 @@ const theme = {
   },
   shadows: {
     default: '0px 5px 10px rgba(0, 0, 0, 0.12)',
-    card: {
-      light: '15px 15px 35px rgba(0, 127, 255, 0.5)',
-      dark: `7px 7px 15px ${colors.primary}`,
-    },
   },
   // rebass variants
   text: {
@@ -94,39 +90,45 @@ const theme = {
     subheader: {
       fontFamily: fonts.heading,
       lineHeight: '1.25',
-      fontSize: [3, 3, 4, 4],
-      marginBottom: 3,
+      fontSize: [3, 3, 4, 5],
+      marginBottom: 2,
     },
     h2: {
       fontFamily: fonts.heading,
       lineHeight: '1.25',
-      fontSize: [2, 3, 4, 5],
-      marginBottom: 3,
+      fontSize: [2, 3, 4],
+      marginBottom: 2,
     },
     h3: {
       fontFamily: fonts.heading,
       lineHeight: '1.25',
       fontSize: [2, 2, 3, 3],
-      marginBottom: 3,
+      marginBottom: 2,
     },
     h4: {
       fontFamily: fonts.heading,
       lineHeight: '1.25',
       fontSize: [1],
-      marginBottom: 3,
+      marginBottom: 2,
     },
     label: {
-      fontFamily: fonts.heading,
+      color: 'gray.dark',
+      fontFamily: fonts.body,
+      fontWeight: 'normal',
       lineHeight: '1.25',
-      fontSize: [0],
-      letterSpacing: '0.1em',
+      fontSize: [0,1],
       textTransform: 'uppercase',
+    },
+    small: {
+      fontFamily: fonts.body,
+      color: 'gray.dark',
+      fontSize: [0,1],
     },
     paragraph: {
       fontFamily: fonts.body,
       lineHeight: '1.75',
-      fontSize: [1, 2],
-      marginBottom: 4,
+      fontSize: [1,2],
+      marginBottom: 3,
     },
     list: {
       fontFamily: fonts.body,
@@ -151,9 +153,9 @@ const theme = {
       borderRadius: 'circle',
     },
     card: {
-      p: 2,
+      borderRadius: 'default',
       bg: 'background',
-      boxShadow: 'card',
+      boxShadow: 'default',
       avatar: {
         width: 'avatar',
         height: 'avatar',
@@ -204,7 +206,7 @@ const theme = {
       color: 'gray.dark',
       bg: 'white',
       borderWidth: '1px',
-      borderStyle: "solid",
+      borderStyle: 'solid',
       borderColor: 'gray.border',
       boxShadow: 'none',
     },

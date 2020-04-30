@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Heading, Text } from 'rebass/styled-components'
+import { Box, Flex, Heading, Text } from 'rebass/styled-components'
 import BaseCard from "./BaseCard"
 
 interface IBasicCardProps {
@@ -16,11 +16,23 @@ const BasicCard: React.FunctionComponent<IBasicCardProps> = ({title, subheader, 
   if (Array.isArray(subheader) && subheader.length > 0) {
     subtitle = subheader[Math.floor(Math.random() * subheader.length)]
   }
-  return(
+  return (
     <BaseCard link={link} {...props}>
-      <Heading variant="label" mb="4">{subtitle}</Heading>
-      <Heading variant="h2" mb="4">{title}</Heading>
-      <Text variant="paragraph">{description}</Text>
+      <Box p={4}>
+        <Heading variant="label" mb="3">
+          {subtitle}
+        </Heading>
+        <Heading variant="h2" mb="3">
+          {title}
+        </Heading>
+        <Text variant="paragraph" mb={2} color="gray.dark">
+          {description}
+        </Text>
+      </Box>
+      <Flex p={4} justifyContent="space-between" sx={{borderTop:"1px solid", borderColor: "gray.light"}}>
+        <Text variant="small">April 20, 2019</Text>
+        <Box>Icon</Box>
+      </Flex>
     </BaseCard>
   )
 };
