@@ -72,6 +72,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-data-table-component": "^3.5.1",
     "react-dom": "^16.10.1",
+    "react-feather": "^2.0.8",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.1",
     "react-mailchimp-subscribe": "^2.1.0",
