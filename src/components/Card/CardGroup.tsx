@@ -2,23 +2,20 @@ import * as React from 'react'
 import { Box, Flex } from 'rebass/styled-components'
 
 interface ICardGroupProps {
-  items: [JSX.Element]
-  columns: Number
+  children: JSX.Element
+  columns: number
 }
 
 const CardGroup: React.FunctionComponent<ICardGroupProps> = ({
-  items,
+  children,
   columns = 2,
   ...props
 }) => {
     const desktopWidth = 1 / columns
+  const renderChildren = React.Children.map(children, (child) => <Box width={[1, desktopWidth]} p={3}>{child}</Box>)
   return (
     <Flex flexWrap="wrap" {...props}>
-      {items.map((item) => (
-        <Box width={[1, desktopWidth]} p={3}>
-          {item}
-        </Box>
-      ))}
+      {renderChildren}
     </Flex>
   )
 }
