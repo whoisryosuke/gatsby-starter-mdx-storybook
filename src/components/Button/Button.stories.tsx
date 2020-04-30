@@ -6,8 +6,13 @@ export default { title: 'Button' };
 
 export const outline = () => <ButtonOutline>Submit</ButtonOutline>
 export const primary = () => <Button variant="primary">Submit</Button>
+export const white = () => (
+  <Button variant="white">
+    Submit
+  </Button>
+)
 export const masthead = () => <Button variant="masthead">Submit</Button>
-export const white = () => <Button variant="masthead" bg="white" color="black">Submit</Button>
+export const whiteMasthead = () => <Button variant="masthead" bg="white" color="black">Submit</Button>
 export const inline = () => <Flex>
   <Box
     as="a"

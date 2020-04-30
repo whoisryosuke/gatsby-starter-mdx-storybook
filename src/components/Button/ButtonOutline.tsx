@@ -10,8 +10,8 @@ export const ButtonOutline: React.FC<Props> = ({children, ...props}) => {
     <Button
       variant="outline"
       sx={{
-        transition: 'background 400ms ease-in, color 500ms ease-in',
-        '&:hover': { backgroundColor: 'black', color: 'white' },
+        transition: 'background 400ms ease-in',
+        '&:hover': { backgroundColor: 'gray.light' },
       }}
       {...props}
     >
