@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Ryosuke`,
-    description: `The portfolio and blog of Ryosuke`,
-    siteUrl: `http://whoisryosuke.com/`,
+    title: `Design Systems Directory`,
+    description: `All the design system articles, videos, events, and communities in one place`,
+    siteUrl: `http://design-systems-directory.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
