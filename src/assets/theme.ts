@@ -157,6 +157,7 @@ const theme = {
       borderRadius: 'default',
       bg: 'background',
       boxShadow: 'default',
+      overflow: 'hidden',
       transition: 'box-shadow 400ms ease-in, transform 400ms ease-in',
       transform: 'translateY(0)',
       '&:hover': {
