@@ -13,11 +13,11 @@ const StyledLink = styled(Link)`
     }
 `
 
-interface IBaseCardProps {
+interface BaseCardProps {
   children: JSX.Element
 }
 
-const BaseCard: React.FunctionComponent<IBaseCardProps> = ({children, link, href, ...props}) => {
+const BaseCard: React.FunctionComponent<BaseCardProps> = ({children, link, href, ...props}) => {
   const LinkComponent = link ? Link : 'a';
   if(link || href) {
     return(
