@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Article 1",
+        "url": "http://test.com",
+        "author": "Ryo",
+        "date": "April 20, 2020",
+        "description": "This is an article about integrating design systems with design systems."
+    },
+    {
+        "title": "Article 2",
+        "url": "http://test.com",
+        "author": "Ryo",
+        "date": "April 21, 2020",
+        "description": "This is an article about integrating design systems with design systems."
+    }
+]

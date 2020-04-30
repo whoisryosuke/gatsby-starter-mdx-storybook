@@ -1,0 +1,24 @@
+[
+    {
+        "title": "DS Event 2020",
+        "location": {
+            "city": "Los Angeles",
+            "state": "California",
+            "country": "USA"
+        },
+        "date": "April 20th, 2020",
+        "url": "http://eventbrite.com",
+        "organizer": "Design Systems Group"
+    },
+    {
+        "title": "Design System Conf 2020",
+        "location": {
+            "city": "San Francisco",
+            "state": "California",
+            "country": "USA"
+        },
+        "date": "April 20th, 2020",
+        "url": "http://eventbrite.com",
+        "organizer": "Design Systems Group"
+    }
+]

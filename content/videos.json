@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Video 1",
+        "url": "http://test.com",
+        "platform": "youtube",
+        "author": "Ryo",
+        "date": "April 20, 2020"
+    },
+    {
+        "title": "Video 2",
+        "url": "http://test.com",
+        "platform": "twitch",
+        "author": "Ryo",
+        "date": "April 21, 2020"
+    }
+]
