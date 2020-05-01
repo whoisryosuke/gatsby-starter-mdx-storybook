@@ -5,27 +5,26 @@ import BaseCard from "./BaseCard"
 
 interface EventCardProps {
     title: string
-    subtitle: string
-    description: string
+    city: string
+    state: string
+    country: string
     date: string
-    link: string
+    href: string
 }
 
-const EventCard: React.FunctionComponent<EventCardProps> = ({ title, subtitle, date, link, ...props }) => {
-    // Check if subtitle is array or string
-    // return one item if array
-    let subtitleSelected = subtitle
-    if (Array.isArray(subtitle) && subtitle.length > 0) {
-        subtitleSelected = subtitle[Math.floor(Math.random() * subtitle.length)]
-    }
+const EventCard: React.FunctionComponent<EventCardProps> = ({ title, date, href, city, state, country, ...props }) => {
+    // Add to array to filter out empty values and comma separate
+    const location = [city, state, country]
+    const locationParsed = location.filter(el => el != null).join(", ")
+    
     return (
-        <BaseCard link={link} {...props}>
+        <BaseCard href={href} {...props}>
             <Box p={4}>
                 <Heading variant="h2" mb="3">
                     {title}
                 </Heading>
                 <Heading variant="label" mb="3">
-                    {subtitleSelected}
+                    {locationParsed}
                 </Heading>
             </Box>
             <Flex
