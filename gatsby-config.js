@@ -50,11 +50,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Ryosuke - Designer, Developer, & Influencer",
-        short_name: "Ryosuke",
+        name: "Design Systems Directory",
+        short_name: "Design Systems Directory",
         start_url: "/",
         background_color: "#F5F5F5",
-        theme_color: "#005CDD",
+        theme_color: "#2F5AF3",
         display: "minimal-ui",
         icon: `static/assets/favicon/android-chrome-512x512.png`, // This path is relative to the root of the site.
         // icons: [
@@ -101,7 +101,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-116899380-1",
+        trackingId: "#",
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
