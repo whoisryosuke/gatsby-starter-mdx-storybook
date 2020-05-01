@@ -26,7 +26,7 @@ export const DesignResources: React.FC<Props> = ({ resources }) => {
         <ImageCard 
           width={[1,1,1/2,1/2,1/3]} 
           title={resource.name} 
-          subheader={resource.category} 
+          subtitle={resource.category} 
           image={`/resources/img/${resource.image}`}
           href={resource.link}
         />

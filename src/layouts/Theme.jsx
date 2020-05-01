@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 
 export const UIComponents = {
   h1: props => <rebass.Heading variant="heading" {...props} />, 
-  h2: props => <rebass.Heading variant="subheader" {...props} />, 
+  h2: props => <rebass.Heading variant="subtitle" {...props} />, 
   h3: props => <rebass.Heading variant="h3" {...props} />, 
   h4: props => <rebass.Heading variant="h4" {...props} />, 
   p: props => <rebass.Text as="p" variant="paragraph" {...props} />, 

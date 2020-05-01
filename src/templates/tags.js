@@ -28,7 +28,7 @@ const Tags = ({ pathContext, data }) => {
       <SectionHeading
         emoji="#️⃣"
         heading={tag}
-        subheader={`(${totalCount} post total)`}
+        subtitle={`(${totalCount} post total)`}
       />
 
       <Box bg="muted">

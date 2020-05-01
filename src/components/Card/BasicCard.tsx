@@ -4,7 +4,7 @@ import BaseCard from './BaseCard'
 
 interface IBasicCardProps {
   title: string
-  subheader: string
+  subtitle: string
   description: string
   link: string
   reverse: boolean
@@ -12,16 +12,16 @@ interface IBasicCardProps {
 
 const BasicCard: React.FunctionComponent<IBasicCardProps> = ({
   title,
-  subheader,
+  subtitle,
   link,
   reverse,
   ...props
 }) => {
-  // Check if Subheader is array or string
+  // Check if subtitle is array or string
   // return one item if array
-  let subtitle = subheader
-  if (Array.isArray(subheader) && subheader.length > 0) {
-    subtitle = subheader[Math.floor(Math.random() * subheader.length)]
+  let subtitle = subtitle
+  if (Array.isArray(subtitle) && subtitle.length > 0) {
+    subtitle = subtitle[Math.floor(Math.random() * subtitle.length)]
   }
   
   // Place content into array

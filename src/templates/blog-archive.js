@@ -81,7 +81,7 @@ const IndexPage = ({ data, pathContext }) => {
         <SectionHeading
           emoji={emojis[pathPrefix]}
           heading={`${sectionName} archive`}
-          subheader={`Page ${index}`}
+          subtitle={`Page ${index}`}
         />
 
         <Box bg="muted">

@@ -23,7 +23,7 @@ export default props => {
         }
       })
       .map(({ node }) => {
-        let postDate = new Date(node.frontmatter.date)
+        const postDate = new Date(node.frontmatter.date)
         switch (props.type) {
           case 'blog':
           case 'blogs':
@@ -31,7 +31,7 @@ export default props => {
               <BasicCard
                 width={[1, 1, 1 / 2, 1/2, 1 / 3]}
                 title={node.frontmatter.title}
-                subheader={node.frontmatter.tags}
+                subtitle={node.frontmatter.tags}
                 description={node.excerpt}
                 link={node.fields.slug}
               />
@@ -43,7 +43,7 @@ export default props => {
               <ProjectCard
                 width={[1, 1, 1 / 2, 1 / 2, 1/3]}
                 title={node.frontmatter.title}
-                subheader={node.frontmatter.tags}
+                subtitle={node.frontmatter.tags}
                 link={node.fields.slug}
               />
             )
@@ -52,7 +52,7 @@ export default props => {
               <BasicCard
                 width={[1, 1, 1 / 2, 1 / 2, 1 / 3]}
                 title={node.frontmatter.title}
-                subheader={node.frontmatter.tags}
+                subtitle={node.frontmatter.tags}
                 description={node.excerpt}
                 link={node.fields.slug}
               />

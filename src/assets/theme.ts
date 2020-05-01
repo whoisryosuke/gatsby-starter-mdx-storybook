@@ -88,7 +88,7 @@ const theme = {
       fontSize: [4, 4, 5, 6],
       marginBottom: 3,
     },
-    subheader: {
+    subtitle: {
       fontFamily: fonts.heading,
       lineHeight: '1.25',
       fontSize: [3, 3, 4, 5],

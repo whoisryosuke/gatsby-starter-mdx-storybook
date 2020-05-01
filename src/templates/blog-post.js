@@ -99,7 +99,7 @@ export default class BlogPost extends Component {
         width={[1 / 2, 1 / 3, 1 / 4]}
         p={3}
         key={tag}
-        variant="subheader"
+        variant="subtitle"
         textAlign="center"
       >
         <Link to={'/tags/' + kebabCase(tag)}>#{tag}</Link>

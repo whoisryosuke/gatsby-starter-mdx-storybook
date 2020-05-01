@@ -10,7 +10,7 @@ export default { title: 'Card' };
 
 // Dummy data
 const title = 'Getting started developing Shopify themes'
-const subheader = 'Getting Started'
+const subtitle = 'Getting Started'
 const description =
   "Shopify has exploded over the past few years, becoming a near de-facto decision for any small to mid scale e-commerce project. It's become more important than ever to sharpen Shopify skills and get a handle on Liquid."
 const date = "April 20, 2020"
@@ -19,7 +19,7 @@ const imageUrl = "http://i3.ytimg.com/vi/r7X9wbeqEtU/maxresdefault.jpg"
 // 3 cards in array for group
 const items = Array.from('x'.repeat(3)).map(() => <ArticleCard
                  title={title}
-                 subheader={subheader}
+                 subtitle={subtitle}
                  description={description}
                  date={date}
                />)
@@ -27,7 +27,7 @@ const items = Array.from('x'.repeat(3)).map(() => <ArticleCard
 export const basic = () => (
              <BasicCard
                title={title}
-               subheader={subheader}
+               subtitle={subtitle}
              />
 )
 export const group = () => (
@@ -36,14 +36,14 @@ export const group = () => (
 export const designSystem = () => (
   <BasicCard
     title={title}
-    subheader={subheader}
+    subtitle={subtitle}
     reverse
   />
 )
 export const article = () => (
          <ArticleCard
            title={title}
-           subheader={subheader}
+           subtitle={subtitle}
            description={description}
            date={date}
            link={'/test'}
@@ -52,7 +52,7 @@ export const article = () => (
 export const event = () => (
          <EventCard
            title="Design Systems Conf 2020"
-           subheader="San Francisco, CA"
+           subtitle="San Francisco, CA"
            date={date}
            link={'/test'}
          />

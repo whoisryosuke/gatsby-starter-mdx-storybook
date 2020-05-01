@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styled from 'styled-components'
 import { Box, Flex, Heading, Image, Text } from 'rebass/styled-components'
 import { Play } from 'react-feather'
 import BaseCard from "./BaseCard"

@@ -5,18 +5,18 @@ import BaseCard from "./BaseCard"
 
 interface IEventCardProps {
     title: string
-    subheader: string
+    subtitle: string
     description: string
     date: string
     link: string
 }
 
-const EventCard: React.FunctionComponent<IEventCardProps> = ({ title, subheader, date, link, ...props }) => {
-    // Check if Subheader is array or string
+const EventCard: React.FunctionComponent<IEventCardProps> = ({ title, subtitle, date, link, ...props }) => {
+    // Check if subtitle is array or string
     // return one item if array
-    let subtitle = subheader
-    if (Array.isArray(subheader) && subheader.length > 0) {
-        subtitle = subheader[Math.floor(Math.random() * subheader.length)]
+    let subtitle = subtitle
+    if (Array.isArray(subtitle) && subtitle.length > 0) {
+        subtitle = subtitle[Math.floor(Math.random() * subtitle.length)]
     }
     return (
         <BaseCard link={link} {...props}>
