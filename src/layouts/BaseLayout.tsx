@@ -6,7 +6,7 @@ import { Box } from 'rebass/styled-components'
 import MobileHeader from "../components/Header/MobileHeader"
 import Footer from '../components/Footer/Footer'
 
-import appleTouchIcon from '../../static/assets/favicon/apple-touch-icon.png'
+import appleTouchIcon from '../../static/assets/favicon/apple-icon.png'
 import favicon32 from '../../static/assets/favicon/favicon-32x32.png'
 import favicon16 from '../../static/assets/favicon/favicon-16x16.png'
 

@@ -56,7 +56,7 @@ module.exports = {
         background_color: "#F5F5F5",
         theme_color: "#2F5AF3",
         display: "minimal-ui",
-        icon: `static/assets/favicon/android-chrome-512x512.png`, // This path is relative to the root of the site.
+        icon: `static/assets/favicon/android-icon-192x192.png`, // This path is relative to the root of the site.
         // icons: [
         //   {
         //     // Everything in /static will be copied to an equivalent
