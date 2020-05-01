@@ -1,15 +1,15 @@
 [
     {
         "title": "Video 1",
-        "url": "http://test.com",
+        "url": "https://www.youtube.com/watch?v=r7X9wbeqEtU",
         "platform": "youtube",
         "author": "Ryo",
         "date": "April 20, 2020"
     },
     {
         "title": "Video 2",
-        "url": "http://test.com",
-        "platform": "twitch",
+        "url": "https://www.youtube.com/watch?v=r7X9wbeqEtU",
+        "platform": "youtube",
         "author": "Ryo",
         "date": "April 21, 2020"
     }
