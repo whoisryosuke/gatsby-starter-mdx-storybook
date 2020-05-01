@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import { Box, Button, Flex, Heading } from 'rebass/styled-components'
+import { Box, Flex, Heading } from 'rebass/styled-components'
 import { ArrowRight} from "react-feather"
 
 import Layout from '../layouts/BaseLayout'
