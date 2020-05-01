@@ -23,7 +23,7 @@ const StyledLink = styled(GLink)`
 `
 
 interface Props {
-  children: React.JSXElement
+  children: React.ReactNode
   to: string
   secondary?: boolean
 }
