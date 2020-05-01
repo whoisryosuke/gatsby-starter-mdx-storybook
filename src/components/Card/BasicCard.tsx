@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Box, Flex, Heading, Text } from 'rebass/styled-components'
 import BaseCard from './BaseCard'
 
-interface IBasicCardProps {
+interface BasicCardProps {
   title: string
   subtitle: string
   description: string
@@ -10,7 +10,7 @@ interface IBasicCardProps {
   reverse: boolean
 }
 
-const BasicCard: React.FunctionComponent<IBasicCardProps> = ({
+const BasicCard: React.FunctionComponent<BasicCardProps> = ({
   title,
   subtitle,
   link,
@@ -19,16 +19,16 @@ const BasicCard: React.FunctionComponent<IBasicCardProps> = ({
 }) => {
   // Check if subtitle is array or string
   // return one item if array
-  let subtitle = subtitle
+  let subtitleSelected = subtitle
   if (Array.isArray(subtitle) && subtitle.length > 0) {
-    subtitle = subtitle[Math.floor(Math.random() * subtitle.length)]
+    subtitleSelected = subtitle[Math.floor(Math.random() * subtitle.length)]
   }
   
   // Place content into array
   // Lets us "reverse" the text placement
   const content = [
     <Heading variant="label">
-      {subtitle}
+      {subtitleSelected}
     </Heading>,
     <Heading variant="h2">
       {title}

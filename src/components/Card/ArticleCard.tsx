@@ -14,15 +14,15 @@ interface IArticleCardProps {
 const ArticleCard: React.FunctionComponent<IArticleCardProps> = ({title, subtitle, description, date, link, ...props}) => {
   // Check if subtitle is array or string
   // return one item if array
-  let subtitle = subtitle
+  let subtitleSelection = subtitle
   if (Array.isArray(subtitle) && subtitle.length > 0) {
-    subtitle = subtitle[Math.floor(Math.random() * subtitle.length)]
+    subtitleSelection = subtitle[Math.floor(Math.random() * subtitle.length)]
   }
   return (
     <BaseCard link={link} {...props}>
       <Box p={4}>
         <Heading variant="label" mb="3">
-          {subtitle}
+          {subtitleSelection}
         </Heading>
         <Heading variant="h2" mb="3">
           {title}

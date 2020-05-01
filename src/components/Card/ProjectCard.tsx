@@ -18,14 +18,14 @@ interface IProjectCardProps {
 const ProjectCard: React.FunctionComponent<IProjectCardProps> = ({ title, subtitle, link, ...props }) => {
   // Check if subtitle is array or string
   // return one item if array
-  let subtitle = subtitle
+  let subtitleSelected = subtitle
   if (Array.isArray(subtitle) && subtitle.length > 0) {
-    subtitle = subtitle[Math.floor(Math.random() * subtitle.length)]
+    subtitleSelected = subtitle[Math.floor(Math.random() * subtitle.length)]
   }
   return(
     <BaseCard link={link} {...props}>
       <Heading variant="h2" mt="5" mb="2">{title}</Heading>
-      <Heading variant="label" mb="4">{subtitle}</Heading>
+      <Heading variant="label" mb="4">{subtitleSelected}</Heading>
     </BaseCard>
   )
 };

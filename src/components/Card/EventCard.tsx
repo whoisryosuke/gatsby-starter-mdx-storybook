@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text } from 'rebass/styled-components'
 import { Calendar } from 'react-feather'
 import BaseCard from "./BaseCard"
 
-interface IEventCardProps {
+interface EventCardProps {
     title: string
     subtitle: string
     description: string
@@ -11,12 +11,12 @@ interface IEventCardProps {
     link: string
 }
 
-const EventCard: React.FunctionComponent<IEventCardProps> = ({ title, subtitle, date, link, ...props }) => {
+const EventCard: React.FunctionComponent<EventCardProps> = ({ title, subtitle, date, link, ...props }) => {
     // Check if subtitle is array or string
     // return one item if array
-    let subtitle = subtitle
+    let subtitleSelected = subtitle
     if (Array.isArray(subtitle) && subtitle.length > 0) {
-        subtitle = subtitle[Math.floor(Math.random() * subtitle.length)]
+        subtitleSelected = subtitle[Math.floor(Math.random() * subtitle.length)]
     }
     return (
         <BaseCard link={link} {...props}>
@@ -25,7 +25,7 @@ const EventCard: React.FunctionComponent<IEventCardProps> = ({ title, subtitle, 
                     {title}
                 </Heading>
                 <Heading variant="label" mb="3">
-                    {subtitle}
+                    {subtitleSelected}
                 </Heading>
             </Box>
             <Flex
