@@ -11,6 +11,10 @@ export const Segment: React.FC<Props> = ({ children, ...props }) => {
             bg="background"
             px={3}
             py={4}
+            sx={{
+                borderBottom:"1px solid",
+                borderColor:"gray.border"
+            }}
             {...props}
         >
             {children}
