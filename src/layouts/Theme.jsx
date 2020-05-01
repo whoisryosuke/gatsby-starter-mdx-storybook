@@ -17,27 +17,12 @@ import { CodeBlock } from "@components/CodeBlock/CodeBlock"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     margin:0;
   }
 
   h1,h2,h3,h4,h5 {
     font-family: ${props => props.theme.fonts.heading};
-  }
-  
-  a {
-    color: ${props => props.theme.colors.black};
-    border-bottom:1px solid ${props => props.theme.colors.black};
-    text-decoration:none;
-  }
-
-  a:hover {
-    color: ${props => props.theme.colors.primary};
-    border-color: ${props => props.theme.colors.primary};
-  }
-
-  p+ul {
-    margin-top:-1em;
   }
 `
 
