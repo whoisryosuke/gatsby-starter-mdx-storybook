@@ -8,7 +8,6 @@ interface TableProps {
 const Table: React.FunctionComponent<TableProps> = ({ children, ...props }) => {
     return (
         <Box as="table" sx={{
-            fontFamily: "Roboto",
             borderRadius: 'default',
             background: 'white',
             boxShadow: 'default',
