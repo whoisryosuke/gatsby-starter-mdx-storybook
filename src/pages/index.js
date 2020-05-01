@@ -38,8 +38,8 @@ export default class Frontpage extends Component {
             Design Systems
           </Heading>
           <CardGroup columns={4}>
-            {designSystems.edges.map(({ node: { title, company } }) => (
-              <BasicCard title={title} subtitle={company} reverse />
+            {designSystems.edges.map(({ node: { title, company, url } }) => (
+              <BasicCard title={title} subtitle={company} href={url.website} reverse />
             ))}
           </CardGroup>
           <Box textAlign="right">
@@ -145,6 +145,9 @@ export const query = graphql`
         node {
           title
           company
+          url { 
+            website
+          }
         }
       }
     }
