@@ -195,11 +195,25 @@ const theme = {
   },
   buttons: {
     primary: {
+      bg: 'primary',
+      color: 'white',
+      border: 0,
+      borderRadius: 'default',
       fontSize: 2,
       fontWeight: 'bold',
+      textDecoration: 'none',
       py: 3,
       px: 4,
       boxShadow: 'default',
+      position: 'relative',
+      transition: 'box-shadow 400ms ease-in, transform 400ms ease-in',
+      transform: 'translateY(0)',
+      ':hover,:focus,.active': {
+        bg: 'primary',
+        color: 'white',
+        boxShadow: 'hover',
+        transform: 'translateY(-0.25em)',
+      },
     },
     masthead: {
       variant: 'buttons.primary',
@@ -222,6 +236,10 @@ const theme = {
       variant: 'buttons.primary',
       color: 'black',
       bg: 'white',
+      ':hover,:focus,.active': {
+        color: 'black',
+        bg: 'white',
+      },
     },
   },
   styles: {
