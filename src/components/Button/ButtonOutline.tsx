@@ -15,7 +15,7 @@ export const ButtonOutline: React.FC<Props> = ({children, ...props}) => {
       }}
       {...props}
     >
-      Submit
+      {children}
     </Button>
   )
 }
