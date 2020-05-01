@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import { Box } from 'rebass/styled-components'
+import { Box, Heading } from 'rebass/styled-components'
 
 import Layout from '../layouts/BaseLayout'
 import Link from '../components/Link/Link'
 import ButtonOutline from '../components/Button/ButtonOutline'
 import Masthead from '../components/Masthead/Masthead'
 import SectionHeading from '../components/SectionHeading/SectionHeading'
+import CardGroup from '@components/Card/CardGroup'
 import BasicCard from '../components/Card/BasicCard'
 import Newsletter from '../components/Newsletter/Newsletter'
 import Featured from '../components/Featured/Featured'
 import PostLoop from '../components/PostLoop/PostLoop'
 import Contact from '../components/Contact/Contact'
+import Segment from '@components/Segment/Segment'
 
 export default class Frontpage extends Component {
   render() {
@@ -22,8 +24,14 @@ export default class Frontpage extends Component {
 
     return (
       <Layout className="Frontpage">
-        <Masthead header="MDX + Storybook" subheader="The easy way to build Gatsby sites" />
+        <Masthead header="All the design systems" subheader="and related articles, videos, podcasts, and events" />
 
+        <Segment>
+          <Heading as="h2" variant="h2">Design Systems</Heading>
+          <CardGroup columns={4}>
+            <BasicCard title="Carbon" subheader="IBM" reverse />
+          </CardGroup>
+        </Segment>
         {/*------- Featured card -------*/}
         <SectionHeading heading="Latest blog posts" />
         <Featured>
