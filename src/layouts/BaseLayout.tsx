@@ -19,6 +19,7 @@ const BaseLayout = ({ children }) => (
       <link rel="apple-touch-icon" sizes="180x180" href={ appleTouchIcon } />
       <link rel="icon" type="image/png" sizes="32x32" href={ favicon32 } />
       <link rel="icon" type="image/png" sizes="16x16" href={ favicon16 } />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
     </Helmet>
