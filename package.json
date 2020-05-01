@@ -1,15 +1,16 @@
 {
-  "name": "gatsby-starter-mdx-storybook",
-  "description": "Design system focused Gatsby starter setup with MDX, Storybook, Styled Components, and Typescript",
+  "name": "design-systems-directory",
+  "description": "All the design system articles, videos, events, and communities in one place",
   "version": "1.0.0",
   "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
   "keywords": [
+    "design-systems",
+    "component-library",
     "react",
     "mdx",
     "storybook",
     "styled-components",
     "gatsby",
-    "blog",
     "typescript"
   ],
   "license": "MIT",
