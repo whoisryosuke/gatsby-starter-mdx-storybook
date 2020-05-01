@@ -9,8 +9,16 @@ const StyledLink = styled(GLink)`
   border-bottom:1px;
   text-decoration:none;
 
+  & :hover {
+    color: ${({theme}) => theme.colors.black};
+  }
+
   ${props => props.secondary && `
     color:${props.theme.colors.black};
+
+    & :hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   `}
 `
 
@@ -23,7 +31,7 @@ interface Props {
 export const Link: React.FC<Props> = ({ children, secondary, to}) => {
   
   return (
-    <StyledLink to={to} secondary>
+    <StyledLink to={to} secondary={secondary}>
       {children}
     </StyledLink>
   )
