@@ -8,7 +8,7 @@ import capitalizeFirstLetter from '../helpers/uppercase'
 import MastheadSVG from '@assets/svg/masthead-circles.svg'
 
 import Layout from '../layouts/BaseLayout'
-import SEO from '@components/SEO/SEO';
+import SEO from '@components/SEO/SEO'
 import ButtonOutline from '../components/Button/ButtonOutline'
 import SectionHeading from '../components/SectionHeading/SectionHeading'
 import PostLoop from '../components/PostLoop/PostLoop'
@@ -25,7 +25,8 @@ const StyledLink = styled(GLink)`
   text-decoration: none;
   color: ${props => props.theme.colors.black};
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: ${props => props.theme.colors.white};
   }
 `
@@ -90,7 +91,7 @@ const IndexPage = ({ data, pathContext }) => {
         <Flex as="nav" justifyContent="space-between">
           <ButtonOutline
             textAlign="left"
-            px={3} 
+            px={3}
             py={5}
             width={[1 / 2, 1 / 2, 1 / 2]}
             sx={{ borderTop: 0, borderLeft: 0, borderRight: 0 }}
@@ -101,7 +102,7 @@ const IndexPage = ({ data, pathContext }) => {
           </ButtonOutline>
           <ButtonOutline
             textAlign="right"
-            px={3} 
+            px={3}
             py={5}
             width={[1 / 2, 1 / 2, 1 / 2]}
             sx={{ borderTop: 0, borderRight: 0 }}
@@ -112,15 +113,19 @@ const IndexPage = ({ data, pathContext }) => {
           </ButtonOutline>
         </Flex>
         <Flex>
-            <ButtonOutline width={[1]} height="3rem" p={3} sx={{borderRight:0, borderLeft:0, borderTop:0}}>
-              <StyledLink to="tags">
-                <Text variant="label" p={3}>
-                  Browse by tag
-                </Text>
-              </StyledLink>
-            </ButtonOutline>
+          <ButtonOutline
+            width={[1]}
+            height="3rem"
+            p={3}
+            sx={{ borderRight: 0, borderLeft: 0, borderTop: 0 }}
+          >
+            <StyledLink to="tags">
+              <Text variant="label" p={3}>
+                Browse by tag
+              </Text>
+            </StyledLink>
+          </ButtonOutline>
         </Flex>
-
       </StyledBackground>
     </Layout>
   )

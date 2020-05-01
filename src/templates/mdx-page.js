@@ -12,19 +12,10 @@ export default class MDXPage extends Component {
 
     return (
       <Layout className="Page">
-        <SEO
-          key={`seo-${post.fields.slug}`}
-          postData={post}
-          isBlogPost
-        />
-        <Box
-          mx="auto"
-          as="article"
-          id="Article"
-        >
-              <MDXRenderer>{post.body}</MDXRenderer>
+        <SEO key={`seo-${post.fields.slug}`} postData={post} isBlogPost />
+        <Box mx="auto" as="article" id="Article">
+          <MDXRenderer>{post.body}</MDXRenderer>
         </Box>
-
       </Layout>
     )
   }

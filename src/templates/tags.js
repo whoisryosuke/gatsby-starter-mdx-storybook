@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Box } from 'rebass/styled-components'
 
 import Layout from '../layouts/BaseLayout'
-import SEO from '@components/SEO/SEO';
+import SEO from '@components/SEO/SEO'
 import SectionHeading from '../components/SectionHeading/SectionHeading'
 import PostLoop from '../components/PostLoop/PostLoop'
 import Link from '../components/Link/Link'

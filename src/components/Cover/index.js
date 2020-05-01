@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { Box, Image } from 'rebass/styled-components'
 
 export default props => {
-  if(props.image !== null) {
+  if (props.image !== null) {
     return (
       <Box as="figure" mb={3} className="Cover">
         {props.image.childImageSharp ? (
@@ -14,7 +14,5 @@ export default props => {
       </Box>
     )
   }
-  return (
-    <div></div>
-  )
+  return <div></div>
 }
