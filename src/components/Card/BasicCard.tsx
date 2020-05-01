@@ -27,10 +27,10 @@ const BasicCard: React.FunctionComponent<IBasicCardProps> = ({
   // Place content into array
   // Lets us "reverse" the text placement
   const content = [
-    <Heading variant="label" mb="3">
+    <Heading variant="label">
       {subtitle}
     </Heading>,
-    <Heading variant="h2" mb="3">
+    <Heading variant="h2">
       {title}
     </Heading>
   ]
@@ -38,7 +38,7 @@ const BasicCard: React.FunctionComponent<IBasicCardProps> = ({
 
   return (
     <BaseCard link={link} {...props}>
-      <Box p={4}>
+      <Box p={4} sx={{ "& *:first-child": { marginBottom: 3} }}>
           {content}
       </Box>
     </BaseCard>
