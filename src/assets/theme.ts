@@ -18,7 +18,7 @@ const breakpoints = [
 
 const colors = {
   text: '#111212',
-  background: '#fff',
+  background: '#F5F5F5',
   primary: '#2F5AF3',
   secondary: '#6D59F0',
   muted: '#f6f6f9',
@@ -155,7 +155,7 @@ const theme = {
     },
     card: {
       borderRadius: 'default',
-      bg: 'background',
+      bg: 'white',
       boxShadow: 'default',
       overflow: 'hidden',
       transition: 'box-shadow 400ms ease-in, transform 400ms ease-in',
